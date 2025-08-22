@@ -1,0 +1,37 @@
+    A Arquitetura Hexagonal, proposta por Alistair Cockburn, é um padrão de arquitetura de software que visa isolar o núcleo da aplicação, ou seja, o centro 
+hexagonal, das suas interações com o mundo exterior, como o banco de dados, a interface do usuário (UI), ou outras aplicações externas. Esse isolamento é 
+realizado por meio de portas e adaptadores, o que permite que a lógica de negócios permaneça independente de qualquer mudança externa.
+
+    Entre os benefícios de de utilizar esse padrão de arquitetura de software estão: isolamento da lógica de negócios; solução de serviços externos independentes;
+possibilidade de adiamento de algumas decisões técnicas; criação e substituição de adaptadores; aplicação fácil de testar; tecnologias fáceis de trocar;
+flexibilidade e escalabilidade; independência de tecnologias.
+
+    A estrutura da Arquitetura Hexagonal permite que a lógica de negócios se mantenha isolada, enquanto adaptações externas podem ser feitas sem impactar o 
+centro da aplicação.
+
+    Centro do hexágono: o núcleo da aplicação
+    O centro hexagonal é o núcleo da aplicação, onde ficam a lógica de negócios e as regras do sistema. Ele é isolado de dependências externas, como banco de 
+dados ou UI, garantindo que a lógica permaneça consistente e não seja afetada por mudanças externas.
+
+    Lado esquerdo do hexágono: o ator principal
+    O lado esquerdo do hexágono representa o "ator principal", que inicia a interação com o sistema, recebendo comandos ou solicitações, como um formulário ou
+ requisição API em uma aplicação web.
+
+    Lado direito do hexágono: o ator secundário
+    O lado direito do hexágono representa o "ator secundário", que responde às interações do ator principal, sendo responsável por ler, escrever ou modificar 
+dados, geralmente com sistemas externos como bancos de dados.
+
+    Portas e adaptadores: facilitadores da comunicação
+    As portas são interfaces que permitem a comunicação entre o centro do hexágono e os lados esquerdo e direito. Existem portas primárias, que interagem com 
+os atores principais, e portas secundárias, que conduzem a ação até o ator secundário, mantendo o fluxo da aplicação.
+
+    Já os adaptadores são responsáveis por usar as portas do hexágono e podem ser modificados ou removidos dinamicamente.
+
+    Arquitetura Hexagonal x Clean Architecture:
+    A Arquitetura hexagonal se preocupa apenas em isolar o domain do resto da aplicação, enquanto a clean architecture separa os componentes em camadas, 
+sendo essas camadas independentes entre elas.
+
+    Na minha opinião, a arquitetura hexagonal deve ser utilizada em projetos complexos, que necessitem de alta flexibilidade, e que precisem tolerar 
+mudanças tecnológicas. Em projetos mais simples, esse padrão de projeto provavelmente irá tornar o projeto excessivamente complexo.
+    Sendo assim, antes de desenvolver sistemas usando esse padrão de projeto, acho importante levar em consideração a flexibilidade que o projeto exige, 
+vida útil do sistema, tamanho do projeto e da equipe desenvolvedora.
